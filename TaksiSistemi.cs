@@ -55,7 +55,7 @@ namespace TaksiSistemi
             double finX = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Gedilecek mekanin Y koordinatini daxil edin: ");
             double finY = Convert.ToDouble(Console.ReadLine());
-            double distance = Math.Pow((finX - stX), 2) + Math.Pow((finY - stY), 2);
+            double distance = Math.Round(Math.Sqrt((Math.Pow((finX - stX), 2) + Math.Pow((finY - stY), 2))));
             Console.WriteLine("Gedeceyiniz mesafe {0}km",distance);
             customerList.Add(new Customer(name, stX, stY, finX, finY,distance));
            
